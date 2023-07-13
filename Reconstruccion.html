@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulos de programacion.</title>
+    <link href="estilo.css" rel="stylesheet">
+</head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div> <!--SOURCES-->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Varela+Round&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&family=Nunito:wght@900&family=Varela+Round&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&family=Josefin+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,700&family=IBM+Plex+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    </div>
+<body>
+    <!-- Funcion para el desvanecido-->
+    <script>
+        function mostrarPestana(n){
+            var pestanas = document.getElementsByClassName("pestana");
+            var cabecera = document.getElementsByClassName("cabecera");
+            for(i = 0; i<pestanas.length; i++){
+                if(pestanas[i].className.includes("p-activa")){
+                    pestanas[i].className = pestanas[i].className.replace("p-activa", "");
+                    cabecera[i].className = cabecera[i].className.replace("c-activa", "");
+                    break;
+                }
+            }
+            pestanas[n].className += " p-activa";
+            cabecera[n].className += " c-activa";
+        }
+    </script>
+
+     <!--Relleno-->
+     <div class="Natanel">
+         hola
+     </div>
+
+
+     <!--ENCABEZADO DE LA PAGINA-->
+     <div style="width:100%;">
+    <header class="enca">
+        <div class="printext">PROGRAMMING MODULE</div>
+        <a href="mod.html">NOM 035</a>
+        <a href="prezi.html">PREZI & PAPER</a>
+        <a href="moora.html">MOORA METHOD</a>
+    </header>
+    </div>
+
+    <!--Separador-->
+    <div>
+        <header class="letras">
+            <h3 class="titulo">Manufacturing Methods</h3>
+            <p class="Subtitulo">Multicriteria Decision Making Project. Semester 2021-A</p>
+        </header>
+    </div>
+       
+    <!--Forumulario-->
+    <div class='Form'>
+        <div class="datos">INSERT DATA HERE:</div>
+        <form id="todo">
+            <div class="formulario">
+                <div id="sinpp1">
+                <div>
+                    <ul class="texto"  >
+                        <input type="text" id="fabri" name="fabricacion" value="" placeholder="Proceso de fabricacion en mm">
+                        <input type="number" id="densi" name="trans" value="" placeholder="Densidad de transistores">
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="row uniforms" >
+                    <input type="number" id="costo" name="costodefab" value="" placeholder="Costo por oblea en dlls">
+                    <select id="anio" name=anio>
+                        <option value="" selected>Year of Development</option>  
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                    </select>
+                    <select id="lito" name="lito" >
+                        <option value="" selected>Lithography</option>  
+                        <option value="DUV">DUV</option>
+                        <option value="EUV">EUV</option>
+                        <option value="183mm">183mm</option>
+                      </select>
+                      <select id="Stock" name="stock">
+                        <option value="" selected>Select stock quantity</option>  
+                        <option value="Alto">high</option>
+                        <option value="Medio">Midium</option>
+                        <option value="Bajo">Low</option>
+                        <option value="Muy bajo">Very low</option>
+                      </select>
+
+                    </ul>
+                </div>
+            </div>
+                <div class="pp1">
+                        <div class="p1"><br> Select your manufacturer:</div>
+                        <input type="radio" class="fabricante" name='fab' value='Samsung'>Samsung
+                        <input type="radio" class="fabricante" name='fab' value='TSMC'>TSMC
+                        <input type="radio" class="fabricante" name='fab' value='Intel'>Intel
+                </div>
+                <div id="but">
+                    <button id="envio" style="text-align: center;">Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--TABS-->
+    <div class="contenedor">
+        <ul class="tabs" style="font-family: 'Josefin Sans', sans-serif;">
+            <li><a href="#" class="cabecera c-activa" onclick="mostrarPestana(0);">TABLE</a></li>
+            <li><a href="#" class="cabecera" onclick="mostrarPestana(1);">GRAPH</a></li>
+            <li><a href="#" class="cabecera" onclick="mostrarPestana(2);">OPTIMIZATION</a></li>
+            <li><a href="#" class="cabecera" onclick="mostrarPestana(3);">CARBON FOOTPRINT</a></li>
+        </ul>
+    </div>
+
+    <!--TAB 1 TABLA-->
+    <!--TAB 1 TABLA-->
+    <!--TAB 1 TABLA-->
+<div class="secciones">
+    <div class="pestana p-activa">
+        <article class="tab1">
+            <div class="formatabla">
+                <table id="tablasil">
+                    <tr>
+                        <th>Manufacturer</th>
+                        <th>Alternative</th>
+                        <th>Density of transistors</th>
+                        <th>Year</th>
+                        <th>Standard production cost per wafer</th>
+                        <th>Lithography</th>
+                        <th>Country of Origin</th>
+                        <th>Wafer size</th>
+                        <th>Number of chips per wafer</th>
+                        <th>Estimated number of chips with a defect</th>
+                        <th>Estimated number of unusable chips</th>
+                        <th>Stock availability</th>
+                        
+                    </tr>
+                </table>
+                <script src="js'/generador.js"> </script>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- TAB 2 TIR-->
+<!-- TAB 2 TIR-->
+<!-- TAB 2 TIR-->
+<!-- TAB 2 TIR-->
+    <div class="pestana">
+        <article calss="tab2">
+            <h1 style="text-align: justify;padding-left: 30px;font-size: 20px;">The following table shows the capital investment required for the production of 2,000,000 chips. The data does not take into account the added cost for the available stock of blades.</h1>
+            <div class="tablahorro">
+                <table id="tablax">
+                    <tr>
+                        <th>method</th>
+                        <th>Investment required</th>
+                        <th>Development cost per chip.</th>
+                        <th>Losses due to dead chips.</th>
+                        <th>Stock</t`h>
+                    </tr>
+                    </table>
+                    <script src="js'/TablaTIR.js"></script>
+                    <div id="textooo">
+                        Results-based tir table.
+                    </div>
+                    <p id="subtextooo">
+                        table based on the sale of 2 million chips, at the standard price of $0.5 per chip
+                    </p>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <script src="js'/GraficoTIR.js"></script>
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <p id="alerta">
+                Both TSMC's and Samsung's 5 nanometer manufacturing methods have been discarded for exceeding the $0.5/chip budget.
+            </p>
+        </div>
+        </article>
+    </div>
+
+
+
+    <!--TAB 3 -->
+
+    <div class="pestana">
+        <article calss="tab3" style="padding-left: 500px;">
+            <div class="container">
+                <div class="row">
+                    <br>
+                    <br>
+                    <br>
+                    <h3 style="text-align: center;font-family: 'DM Sans', sans-serif;">Ingresa el metodo de fabricacion que ha sido seleccionado</h3>
+                    <div class="col-md-12" style="font-family: 'Merriweather Sans', sans-serif;">
+                            <form action="" id="searchForm" method="">
+        
+                <textarea class="form-control" style="width: 100%;height: 200px;" id="texto" name="texto"></textarea>
+                <br><br>
+                <button class="crash" type="submit"> Buscar</button>
+        
+            </form>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-12" style="font-family: 'Merriweather Sans', sans-serif;">
+                            <p>
+                <b>Result: <span id="resultado"></span></b>
+            </p>
+            
+                    </div>
+                </div>
+            </div>
+                    
+            <script src="js'/texto.js"></script>
+
+<script src="js'/idk.js"></script>  
+
+<form action="#" style="font-family: 'Rubik', sans-serif;">
+    How optimized is the manufacturing method:
+    <input type="range" id="opt" min="0" max="7">
+    <span id="temp">0</span>
+    <br>
+
+    Versatibility of the method:
+    <input type="range" id="vers" min="0" max="7">
+    <span id="min">0</span>
+    <br>
+
+    Technological innovation to adapt to Industry 4.0:
+    <input type="range" id="3rs" min="0" max="7">
+    <span id="max">0</span>
+    <br>
+    <input type="submit" class="crash" value="Confirmar">
+</form>
+
+<p class="Rotacion" style="Font-family: 'DM Sans', sans-serif; padding: 30px;font-size: 20px;">Personnel rotation.</p>
+
+<form style="font-family: 'Rubik', sans-serif;">
+
+
+    Staff rotation in Industry 4.0:
+    <input type="range" id="on4" min="0" max="7">
+    <span id="tump">0</span>
+    <br>
+
+    Technology learning curve
+    <input type="range" id="inb4" min="0" max="7">
+    <span id="mun">0</span>
+    <br>
+
+    Technological innovation to adapt to Industry 4.0
+    <input type="range" id="in4" min="0" max="7">
+    <span id="mux">0</span>
+    <br>
+    <input type="submit" class="crash" value="Confirmar">
+
+</form>
+</article>
+</div>
+
+<!--TAB 4-->
+<!--TAB 4-->
+<!--TAB 4-->
+<div class="pestana">
+    <article calss="tab4" style="padding-left: 400px;">
+        <div class='container' style="font-family: 'Nunito', sans-serif;">
+            <h1>Carbon Emmision Calculator</h1>
+            <h3>What is the plane MPG?</h3>
+            <input id='mpg' type='number' placeholder='Insert MPG'/>
+            <h3>What is the total commute distance? (in miles)</h3>
+            <input id='dist' type='number' placeholder='Insert Distance'/>
+          <h3>How often is this trip per week?</h3>
+            <input id='trips' type='number' placeholder='Insert Trips'/>
+            <br/>
+            <br/>
+            <button class='botonazo' onclick='calcCO2()'>Calculate Carbon Footprint</button>
+          <br/>
+          <br/>
+        </div>
+        <br/>
+        <div class='container text-center' style="font-family: 'Merriweather Sans', sans-serif;">
+            <h2>Your Carbon Footprint is:</h2>
+            <h1 id='result4' class='bg-success rounded-lg' style="color: rgb(160, 45, 45);"></h1>
+            <h3>g CO2e / mile</h3>
+          <br/>
+            <h2>Your Carbon Footprint this trip is:</h2>
+            <h1 id='result' class='bg-success rounded-lg' style="color: rgb(160, 45, 45);"></h1>
+            <h3>kg CO2e</h3>
+          <br/>
+           <h2>Your Carbon Footprint per week is:</h2>
+            <h1 id='result2' class='bg-success rounded-lg'style="color: rgb(160, 45, 45);"></h1>
+            <h3>kg CO2e</h3>
+                    <br/>
+           <h2>Your Carbon Footprint per year is:</h2>
+            <h1 id='result3' class='bg-success rounded-lg'style="color: rgb(160, 45, 45);"></h1>
+            <h3>kg CO2e</h3>
+        </div>
+        
+        <script src="js'/cript.js"> </script>
+    </article>   
+</div>
+
+</article>
+</div>
+
+
+
+
+
+<div style="padding-top: 1200px;"></div>
+
+<div class="fondo">
+    <footer id="pie">
+        <ul class="imagenes">
+            <img class="foto1" src="imagenes/uacjlogo.png">
+            <img class="foto2" src="imagenes/Felipe2.jpg">
+        </ul>
+        <div class="creditos">
+            <p>Desarollado por Felipe Rivera Gomez - 188790</p>
+            <p>Toma de desiciones multicriterio - Semestre 2021-A - UACJ * IIT</p>
+        </div>
+        </ul>
+    </footer>
+</div>
+
+</body>
+</html>
